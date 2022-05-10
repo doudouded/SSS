@@ -18,9 +18,16 @@ cat << EOF > ${DIR_TMP}/heroku.json
       "ip": "127.0.0.1"
     }
   }],
-    "outbounds": [{
-        "protocol": "freedom"
-    }]
+  "outbounds": [{
+    "protocol": "freedom",
+    "settings": {},
+    "tag": "direct"
+  }],
+  "policy": {
+    "levels": {
+      "0": {"uplinkOnly": 0}
+    }
+  }
 }
 EOF
 
